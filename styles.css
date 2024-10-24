@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px; /* Largura máxima para o conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 20px;
+}
+
+header {
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #007bff;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+select {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 200px; /* Diminuindo a largura do seletor */
+  margin-right: 10px; /* Espaço entre input e button */
+}
+
+input[type="text"] {
+  width: 300px; /* Mantendo a largura do campo de texto */
+}
+
+button {
+  padding: 14px 30px; /* Aumentando o tamanho do botão */
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.results {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.results li {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.results li:hover {
+  background: #f9f9f9;
+}
+
+.results img {
+  border-radius: 4px;
+  margin-right: 15px;
+  width: 80px; /* Tamanho fixo para as imagens */
+}
+
+.results .product-info {
+  flex-grow: 1; /* Faz o texto ocupar o espaço restante */
+}
+
+.results .product-price {
+  font-weight: bold; /* Deixa o preço em negrito */
+  margin-left: 10px; /* Espaço entre o nome do produto e o preço */
+  text-align: right; /* Centraliza o preço à direita */
+  flex-basis: 100px; /* Define uma largura fixa para o preço */
+}
+
+.results a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: auto; /* Alinha o link à direita */
+}
+
+.results a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 15px;
+}
