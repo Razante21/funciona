@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Pesquisa de Produtos</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pesquisar Produtos</h1>
+        </header>
+        <form method="POST" action="/">
+            <input type="text" name="query" placeholder="Buscar produtos..." required>
+            <select name="sort_order">
+                <option value="relevance">Relevância</option>
+                <option value="price_asc">Menor Preço</option>
+                <option value="price_desc">Maior Preço</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div class="error">{{ error_message }}</div>
+        <div class="results">
+            <ul>
+                {% if search_results %}
+                    {% for product in search_results %}
+                        <li>
+                            <img src="{{ product.image }}" alt="{{ product.title }}">
+                            <div class="product-info">
+                                <a href="{{ product.link }}" target="_blank">{{ product.title }}</a>
+                                <span class="product-price" style="float: right;">R$ {{ product.price }}</span>
+                            </div>
+                        </li>
+                    {% endfor %}
+                {% else %}
+                    <li>Nenhum produto encontrado.</li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
